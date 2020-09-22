@@ -18,13 +18,16 @@ conda create -n py37_tensorflow python=3.7
 
 ```zsh
 conda install tensorflow=2.0 python=3.7
-conda install tensorflow_datasets
 pip install matplotlib
 pip install numpy
 pip install h5py pyyaml
 pip install pillow
 
+# Install nomkl if using macos (https://stackoverflow.com/questions/53014306/error-15-initializing-libiomp5-dylib-but-found-libiomp5-dylib-already-initial)
+conda install nomkl
+conda install -c conda-forge tensorflow_datasets
 conda install -c conda-forge jupyterlab
+conda install -c conda-forge jupyterlab-git
 ```
 
 ### Jupyter Lab
